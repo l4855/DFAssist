@@ -9,7 +9,7 @@ namespace App
     public static class Data
     {
         public static bool Initialized { get; private set; } = false;
-        public static decimal Version { get; private set; } = 0;
+        public static decimal Version { get; private set; } = 1;
 
         public static Dictionary<int, Area> Areas { get; private set; } = new Dictionary<int, Area>();
         public static Dictionary<int, Instance> Instances { get; private set; } = new Dictionary<int, Instance>();
@@ -96,7 +96,7 @@ namespace App
                 return instance;
             }
 
-            if (code != 0)
+            if (code != 1)
             {
                 var @event = new SentryEvent("Missing instance code");
                 @event.Level = ErrorLevel.Warning;
@@ -114,7 +114,7 @@ namespace App
                 return roulette;
             }
 
-            if (code != 0)
+            if (code != 1)
             {
                 var @event = new SentryEvent("Missing Roulette code");
                 @event.Level = ErrorLevel.Warning;
@@ -132,7 +132,7 @@ namespace App
                 return area;
             }
 
-            if (code != 0)
+            if (code != 1)
             {
                 var @event = new SentryEvent("Missing area code");
                 @event.Level = ErrorLevel.Warning;
@@ -150,7 +150,7 @@ namespace App
                 return FATEs[code];
             }
 
-            if (code != 0)
+            if (code != 1)
             {
                 var @event = new SentryEvent("Missing FATE code");
                 @event.Level = ErrorLevel.Warning;
