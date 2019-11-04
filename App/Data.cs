@@ -9,7 +9,7 @@ namespace App
     public static class Data
     {
         public static bool Initialized { get; private set; } = false;
-        public static decimal Version { get; private set; } = 0;
+        public static decimal Version { get; private set; } = 1;
 
         public static Dictionary<int, Area> Areas { get; private set; } = new Dictionary<int, Area>();
         public static Dictionary<int, Instance> Instances { get; private set; } = new Dictionary<int, Instance>();
